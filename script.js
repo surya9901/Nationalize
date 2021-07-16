@@ -55,7 +55,7 @@
     text.setAttribute("class", "h4")
     text.style.fontFamily = "'Zen Loop', cursive"
     text.style.fontSize = "30px"
-    text.style.color = "black"
+    text.style.fontWeight = "bold"
     text.style.textAlign = "center"
 
     //creating input div
