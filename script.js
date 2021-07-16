@@ -107,7 +107,7 @@ reset.style.marginLeft = "15px"
 //creating a div to display the data 
 
 var div2 = document.createElement("div")
-div2.setAttribute("calss", "conatiner-lg")
+div2.setAttribute("class", "conatiner-lg")
 div2.style.margin = "-4px"
 div2.style.textAlign = "center"
 div2.style.fontFamily = "'Comic Neue', cursive"
