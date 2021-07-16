@@ -81,7 +81,7 @@
     //creating a button
 
     var search = document.createElement("button")
-    search.innerText = "SEARCH"
+    search.innerText = "Search"
     search.setAttribute("onclick", "handleClick()")
     search.setAttribute("class", "btn btn-secondary")
     search.setAttribute("type", "button")
