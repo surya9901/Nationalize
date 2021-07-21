@@ -159,7 +159,7 @@ async function viewinfo() {
           country_name(element.probability, element.country_id);
         }
       }
-    }
+    }document.getElementById("myInput").value =""
   } catch (error) {
     console.error();
   }
