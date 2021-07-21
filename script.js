@@ -90,19 +90,6 @@ input_div.append(search);
 
 search.style.marginLeft = "15px";
 
-//creating a button
-
-var reset = document.createElement("button");
-reset.innerText = "Reset";
-reset.setAttribute("onclick", "reload()");
-reset.setAttribute("class", "btn btn-secondary");
-reset.setAttribute("type", "button");
-input_div.append(reset);
-
-//styling the button
-
-reset.style.marginLeft = "15px";
-
 //creating a div to display the data
 
 var div2 = document.createElement("div");
