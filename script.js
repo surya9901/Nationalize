@@ -116,7 +116,7 @@ document.body.append(div2);
 
 //activates once submit button clicked
 
-function handleClick(value) {
+function handleClick() {
   document.getElementById("d2").innerHTML = "";
 
   var value = document.getElementById("myInput").value;
@@ -137,6 +137,7 @@ async function viewinfo() {
 
     if (res.country == "" || null) {
       alert("Sorry your name does not exist in our database!");
+      reload()
       return false;
     } else {
       var name = document.createElement("div");
