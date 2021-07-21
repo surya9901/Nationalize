@@ -143,14 +143,18 @@ async function viewinfo() {
       name.innerText = "Name : " + value;
       div2.append(name);
 
-      var len = res.country.length - 1;
+      var len = res.country.length;
 
-      for (let i = 0; i < len; i++) {
-        const element = res.country[i];
-
-        if (element == "" || null) {
-          alert("User Data not found");
-        } else {
+      if (len >= 3) {
+        len = res.country.length - 1;
+        for (let i = 0; i < len; i++) {
+          const element = res.country[i];
+          country_name(element.probability, element.country_id);
+        }
+      } else {
+        len = res.country.length;
+        for (let i = 0; i < len; i++) {
+          const element = res.country[i];
           country_name(element.probability, element.country_id);
         }
       }
@@ -165,9 +169,17 @@ async function country_name(a, b) {
   var res = await data.json();
   var name = res.name;
 
-  var nation1 = document.createElement("div");
-  nation1.innerHTML = "Country Name : " + name + " <br> Probability is : " + a;
-  document.getElementById("d2").append(nation1);
+  if (a >= 1) {
+    var nation1 = document.createElement("div");
+    nation1.innerHTML =
+      "Country Name : " + name + " <br> Probability is : " + a;
+    document.getElementById("d2").append(nation1);
+  } else {
+    var nation1 = document.createElement("div");
+    nation1.innerHTML =
+      "Country Name : " + name + " <br> Probability is : " + a.toFixed(2);
+    document.getElementById("d2").append(nation1);
+  }
 }
 
 // actiavtes once the reset button clicked
