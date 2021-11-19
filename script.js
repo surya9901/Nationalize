@@ -146,16 +146,17 @@ async function viewinfo() {
           country_name(element.probability, element.country_id);
         }
       }
-    }document.getElementById("myInput").value =""
+    }
+    document.getElementById("myInput").value = ""
   } catch (error) {
     console.error();
   }
 }
 
 async function country_name(a, b) {
-  var data = await fetch("https://restcountries.eu/rest/v2/alpha/" + b);
+  var data = await fetch("https://restcountries.com/v3.1/alpha/" + b);
   var res = await data.json();
-  var name = res.name;
+  var name = res[0].name.common;
 
   if (a >= 1) {
     var nation1 = document.createElement("div");
@@ -175,3 +176,4 @@ async function country_name(a, b) {
 function reload() {
   location.reload();
 }
+
